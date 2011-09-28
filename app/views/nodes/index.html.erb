@@ -1,0 +1,14 @@
+<div class="nodes collection-list">
+  <h2>All Nodes</h2>	
+  <% unless @nodes.blank? %>
+	<p>
+	  <% @nodes.each do |node| %>
+	    <%= node.name %> - <%= node.text %>
+		<%= link_to('View', node_path(node), :class => "action-view") %>
+	  <% end %>
+	</p>
+  <% else %>
+	<h2>No nodes yet.</h2>
+  <% end %>
+</div>
+

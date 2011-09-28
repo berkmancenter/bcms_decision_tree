@@ -1,0 +1,15 @@
+<p><b>Name:</b> <%= @content_block.name %></p>
+<p><b>Text:</b> <%= @content_block.text %></p>
+
+<p>
+	<b>Choices:</b> 
+	<ul>
+	    <% @content_block.choices.each do |choice| %>
+		  <% unless choice.choices.nil? || choice.choices.blank? %>	
+		    <li><%= link_to choice.text, choice %></li>
+		  <% else %>
+		    <li><%= choice.text %></li>
+		  <% end %>
+		<% end %>
+	  </ul>	
+</p>

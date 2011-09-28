@@ -1,0 +1,20 @@
+<% @node = f.object %>
+
+<%= f.cms_text_field :name %>
+
+<%= f.cms_text_field :text %>
+
+<%= f.cms_check_box :first, :instructions=>"Is this the first question?" %>
+
+<div class="fields text_fields">
+<%= label_tag "choices" %>
+<% all_nodes = Node.all(:order => 'name') %>
+<% unless all_nodes.blank? %>
+  <% for node in all_nodes %>
+      <% unless node == @node %>
+	    <%= check_box_tag "node[choice_ids][]", node.id, @node.choices.include?(node) %>
+        <%= node.name %>
+	  <% end %>	
+  <% end %>
+<% end %>
+</div>

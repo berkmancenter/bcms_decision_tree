@@ -20,6 +20,6 @@ Gem::Specification.new do |spec|
   spec.has_rdoc = true
   spec.extra_rdoc_files = ["README"]
 
-  spec.add_dependency('browsercms', "3.3.0")
+  spec.add_dependency('browsercms', "3.3.2")
 
 end

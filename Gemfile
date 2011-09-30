@@ -29,5 +29,5 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
-gem "browsercms", "3.3.0"
+gem "browsercms", "3.3.2"
 gemspec

@@ -1,7 +1,7 @@
 BcmsDecisionTree::Application.routes.draw do
   namespace :cms  do content_blocks :nodes end
-
-
+  #map.connect 'nodes/:action/:id', :controller => 'nodes_controller'
+  match 'nodes/:action/:id' => 'nodes_controller' # same as: map.connect "welcome", :controller
   routes_for_bcms_decision_tree
 
   routes_for_browser_cms

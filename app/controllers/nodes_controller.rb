@@ -1,4 +1,5 @@
-class NodesController < ApplicationController
+class NodesController < DecisionTreeBaseController
+  #layout 'templates/default'
   
   def index
     @nodes = Node.all
@@ -10,6 +11,7 @@ class NodesController < ApplicationController
 
   def show
     @node = Node.find(params[:id])
+    @page_title = "Copyright Tool"
   end
 
   def edit

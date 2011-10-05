@@ -1,3 +1,4 @@
+<% content_for :main do %>
 <div class="node show-object">
   <% if @node.is_question? %>
   	<p>
@@ -34,3 +35,7 @@
 	<p>
   <% end %>
 </div>
+<p>
+	<%= link_to "Exit and Return to Home", "/" %>
+</p>	
+<% end %>

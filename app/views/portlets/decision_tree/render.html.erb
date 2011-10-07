@@ -1,10 +1,9 @@
-<h2>Flow Chart</h2>	
-  <% unless @start_nodes.nil? %>
-	<ul>
-	  <% @start_nodes.each do |node| %>
-		<li><%= node.name %> - <%= node.text %> <%= link_to('Begin', node_path(node), :class => "action-view") %></li>
-	  <% end %>
-	</ul>
-  <% else %>
-	<h2>No start node set.</h2>
-  <% end %>  
+<% unless @start_nodes.nil? %>
+  <ul>
+    <% @start_nodes.each do |node| %>
+  	  <li><%= node.name %> - <%= node.text %> <%= link_to('Begin', node_path(node), :class => "action-view") %></li>
+	<% end %>
+  </ul>
+<% else %>
+  <h2>No start node set.</h2>
+<% end %>  
